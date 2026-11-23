@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><title>Cuadro sinóptico | Amplificador de instrumentación</title>
+<style>
+:root{--ink:#102b4d;--blue:#123a69;--muted:#53697e;--bg:#edf4fa;--line:#c4d8e8;--mint:#e6f6ed;--lav:#f0eafd;--yel:#fff4d7;--peach:#fff0e7}*{box-sizing:border-box}body{margin:0;font-family:Arial,'Segoe UI',sans-serif;color:var(--ink);background:var(--bg)}.toolbar{position:sticky;top:0;z-index:10;display:flex;gap:10px;justify-content:space-between;align-items:center;padding:12px max(20px,calc((100vw - 1320px)/2));background:#fff;border-bottom:1px solid var(--line);box-shadow:0 2px 12px #173e6414}.toolbar .buttons{display:flex;gap:8px;flex-wrap:wrap}button{border:0;background:var(--blue);color:white;font-weight:700;border-radius:9px;padding:10px 14px;cursor:pointer}button.secondary{background:#e6edf6;color:var(--ink)}button:hover{filter:brightness(1.1)}small{color:var(--muted)}main{max-width:1320px;margin:22px auto;padding:0 20px 30px}.sheet{background:white;border:1px solid var(--line);border-radius:19px;box-shadow:0 9px 35px #17405c14;padding:36px;overflow:hidden}.eyebrow{color:#35669c;text-transform:uppercase;font-size:13px;letter-spacing:1.8px;font-weight:800}.headline{text-align:center;margin-bottom:28px}.headline h1{font-size:clamp(26px,3vw,42px);margin:9px 0;color:#0b2c56}.headline p{margin:0;color:var(--muted)}.diagram{display:grid;grid-template-columns:290px 36px minmax(0,1fr);align-items:center;gap:0}.root{background:linear-gradient(145deg,#092a50,#215c93);color:white;padding:30px 20px;border-radius:23px;text-align:center;box-shadow:0 5px 16px #16406a20}.root svg{width:95px;height:75px}.root h2{line-height:1.18;font-size:27px;margin:13px 0}.root p{font-size:15px;line-height:1.55;margin-bottom:0;color:#eaf2fc}.brace{height:84%;border:5px solid #123a69;border-left:0;border-radius:0 19px 19px 0;margin-right:20px;position:relative}.brace:before{content:"";position:absolute;width:20px;height:5px;background:#123a69;left:100%;top:50%}.branches{display:flex;flex-direction:column;gap:15px}.branch{display:grid;grid-template-columns:215px 1fr;align-items:stretch;gap:12px}.branch-title{display:flex;gap:12px;align-items:center;border-radius:16px;padding:15px;font-weight:800;font-size:20px}.branch-title .emoji{font-size:29px}.content{border:2px solid var(--line);border-radius:16px;padding:16px 22px;font-size:16px;line-height:1.5;background:#fff}.content ul{margin:0;padding-left:20px}.content li+li{margin-top:4px}.lav .branch-title{background:#e6d9fb}.lav .content{border-color:#baa5ed;background:#fbf9ff}.yel .branch-title{background:#ffe79b}.yel .content{border-color:#e8c76c;background:#fffcf4}.mint .branch-title{background:#cff0d9}.mint .content{border-color:#a3d5ac;background:#fafffb}.peach .branch-title{background:#ffddcb}.peach .content{border-color:#f1b79b;background:#fffaf7}.eq{font-family:Georgia,serif;font-style:italic;font-size:19px}.equations{display:grid;grid-template-columns:1fr 1fr;gap:8px 24px}.equations div{min-width:0}.equations .wide{grid-column:1/-1}.circuit{display:grid;grid-template-columns:260px 1fr;gap:15px;align-items:center}.circuit svg{width:100%;max-width:260px;height:auto}.footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}.footer-card{border:2px solid #8bc9e8;border-radius:15px;padding:17px 20px;background:#f3fbff}.footer-card h3{margin:0 0 8px;font-size:21px}.footer-card p{margin:7px 0;line-height:1.5}.project{margin-top:20px;padding:15px 19px;border-left:5px solid #1c679f;background:#f0f7fd;border-radius:9px;line-height:1.5}.meta{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:18px;color:var(--muted);font-size:13px}.edit{outline:0;border-radius:3px}.edit:focus{box-shadow:0 0 0 2px #1b9fe2;background:#fff;}.tip{padding:13px 18px;max-width:1320px;margin:0 auto 24px;font-size:14px;color:#50677b}.toast{position:fixed;bottom:22px;right:22px;background:#163d64;color:white;padding:12px 17px;border-radius:10px;display:none;z-index:99}@media(max-width:980px){.diagram{grid-template-columns:1fr}.root{max-width:none}.brace{display:none}.branches{margin-top:16px}.branch{grid-template-columns:1fr}.branch-title{justify-content:center}.circuit{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.sheet{padding:18px}}@media print{@page{size:A3 landscape;margin:8mm}body{background:white;-webkit-print-color-adjust:exact;print-color-adjust:exact}.toolbar,.tip,.toast{display:none!important}main{margin:0;max-width:none;padding:0}.sheet{border:0;border-radius:0;box-shadow:none;padding:4px}.headline{margin-bottom:13px}.headline h1{font-size:28px}.diagram{grid-template-columns:235px 32px minmax(0,1fr)}.root{padding:17px 12px}.root h2{font-size:21px}.root p{font-size:12px}.branches{gap:7px}.branch{grid-template-columns:170px 1fr;gap:8px}.branch-title{font-size:15px;padding:9px}.branch-title .emoji{font-size:20px}.content{font-size:12px;padding:9px 12px}.eq{font-size:14px}.circuit{grid-template-columns:200px 1fr;gap:7px}.circuit svg{width:195px}.footer-grid{margin-top:13px;gap:10px}.footer-card{padding:10px 14px}.footer-card h3{font-size:16px}.footer-card p{font-size:12px}.project{font-size:12px;padding:7px 12px;margin-top:10px}.meta{padding-top:8px}}
+
+/* Full-document editing */
+.guide{background:#e6f3fb;padding:10px 18px;text-align:center;color:#245071;font-size:13px;border-bottom:1px solid #d3e5f0}
+.edit,[contenteditable="true"]{cursor:text;min-width:12px;outline:2px solid transparent;outline-offset:2px;transition:background .15s,outline-color .15s}
+.edit:hover,[contenteditable="true"]:hover{outline-color:#7fc3ee;background-color:rgba(218,240,255,.5)}
+.edit:focus,[contenteditable="true"]:focus{outline:2px solid #1687db!important;background:#fff!important;color:#102b4d!important}
+.circuit-editable{display:flex;flex-direction:column;gap:8px;align-items:center;justify-content:center;border:1px dashed #8dc4a3;padding:9px;border-radius:12px;background:#f5fff8}
+.circuit-stage{display:flex;gap:5px;align-items:center;justify-content:center;width:100%;font-size:12px}
+.amp-block{border:2px solid #2c7865;padding:6px 10px;border-radius:9px;background:#d8f4e4;text-align:center;min-width:88px;font-weight:700}
+.rg-label{background:#fff7c6;padding:5px 9px;border:1px solid #d8be50;border-radius:7px;font-size:12px;text-align:center}
+.flow-arrow{color:#186254;font-weight:700;white-space:nowrap}.signal{font-weight:bold}
+.section-controls{display:none;justify-content:flex-end;gap:5px;margin-bottom:4px;grid-column:1/-1}.order-mode .section-controls{display:flex}.order-mode .branch{position:relative;border:1px dashed #aabbd0;padding:5px;border-radius:14px}
+.section-controls button{font-size:12px;padding:4px 8px;border-radius:6px}.section-controls .danger{background:#b53b48}
+.brand{display:flex;flex-direction:column;gap:2px}.brand small{font-size:11px}
+@media(max-width:1100px){.toolbar{padding:12px;flex-direction:column;align-items:stretch}.buttons{justify-content:center}}
+@media print{.guide,.section-controls,.no-print{display:none!important}.circuit-editable{padding:4px;gap:3px}.amp-block{padding:3px 6px;min-width:72px}.branch-title{white-space:normal}}
+</style></head><body>
+<div class="toolbar no-print"><div class="brand"><strong>Editor completo · Cuadro sinóptico</strong><small> Edita cualquier texto, los títulos y el diagrama</small></div><div class="buttons"><button class="secondary" id="addSection">+ Sección</button><button class="secondary" id="toggleMove">Ordenar secciones</button><button class="secondary" id="save">Guardar en navegador</button><button class="secondary" id="download">Descargar HTML editable</button><button id="pdf">Imprimir / Guardar PDF</button><button class="secondary" id="reset">Restaurar original</button></div></div>
+<main><article class="sheet"><div class="headline"><div class="eyebrow edit" contenteditable="true">Reto 3 · Paso 1 · Curso 203038</div><h1 class="edit" contenteditable="true">Amplificador de instrumentación</h1><p class="edit" contenteditable="true">Características, ecuaciones, circuito y aplicaciones · Conceptos de filtros</p></div>
+<div class="diagram"><div class="root"><svg viewbox="0 0 100 80" xmlns="http://www.w3.org/2000/svg"><path d="M30 10 L85 40 L30 70 Z" fill="none" stroke="white" stroke-linejoin="round" stroke-width="4"></path><path d="M5 25H30M5 55H30M85 40H99" stroke="white" stroke-width="4"></path><path d="M35 25h13m-6.5-6.5v13M35 55h13" stroke="white" stroke-width="3"></path></svg><h2 class="edit" contenteditable="true">AMPLIFICADOR DE INSTRUMENTACIÓN</h2><p class="edit" contenteditable="true" data-edit="definition">Circuito que amplifica pequeñas diferencias de voltaje procedentes de sensores y atenúa las señales comunes a sus dos entradas.</p></div><div class="brace"></div><div class="branches">
+<section class="branch lav"><div class="branch-title edit" contenteditable="true"><span class="emoji">📋</span>Características</div><div class="content edit" contenteditable="true" data-edit="features"><ul><li>Alta impedancia de entrada: reduce la carga sobre el sensor.</li><li>Amplifica la diferencia entre dos señales.</li><li>Alto rechazo de señales de modo común (CMRR).</li><li>Ganancia ajustable mediante una resistencia R<sub>G</sub>.</li><li>Útil para medir voltajes pequeños con precisión.</li></ul></div></section>
+<section class="branch yel"><div class="branch-title edit" contenteditable="true"><span class="emoji">🧮</span>Ecuaciones generales</div><div class="content equations edit" contenteditable="true" data-edit="equations"><div>Voltaje diferencial:<br/><span class="eq">V<sub>d</sub> = V<sub>2</sub> − V<sub>1</sub></span></div><div>Salida ideal:<br/><span class="eq">V<sub>o</sub> = G · V<sub>d</sub></span></div><div class="wide">Ganancia (tres operacionales, etapa diferencial unitaria y resistencias iguales R): <span class="eq">G = 1 + 2R/R<sub>G</sub></span></div></div></section>
+<section class="branch mint"><div class="branch-title edit" contenteditable="true"><span class="emoji">🔌</span>Circuito</div><div class="content circuit"><div aria-label="Diagrama funcional editable de tres amplificadores" class="circuit-editable">
+<div class="circuit-stage"><span class="edit signal" contenteditable="true">V₁</span><span class="flow-arrow">→</span><div class="amp-block edit" contenteditable="true">A1<br/>Entrada 1</div></div>
+<div class="circuit-stage"><span class="edit signal" contenteditable="true">V₂</span><span class="flow-arrow">→</span><div class="amp-block edit" contenteditable="true">A2<br/>Entrada 2</div></div>
+<div class="rg-label edit" contenteditable="true">R<sub>G</sub> · Ajuste de ganancia</div>
+<div class="circuit-stage middle"><span class="flow-arrow">A1 + A2 →</span><div class="amp-block edit" contenteditable="true">A3<br/>Diferencial</div><span class="flow-arrow">→</span><span class="edit signal" contenteditable="true">V<sub>o</sub></span></div>
+</div><div class="edit" contenteditable="true" data-edit="circuit"><ul><li>Dos amplificadores de entrada (A1 y A2).</li><li>Resistencia R<sub>G</sub> entre etapas de entrada para ajustar la ganancia.</li><li>Tercer operacional (A3) como amplificador diferencial.</li><li>El diseño real requiere resistencias correctamente emparejadas.</li></ul></div></div></section>
+<section class="branch peach"><div class="branch-title edit" contenteditable="true"><span class="emoji">⚙️</span>Aplicaciones</div><div class="content edit" contenteditable="true" data-edit="applications"><ul><li>Medición de temperatura con sensores PT100 y PT1000.</li><li>Acondicionamiento de puentes de Wheatstone.</li><li>Mediciones biomédicas (por ejemplo, ECG).</li><li>Sistemas de automatización y control industrial.</li></ul></div></section>
+</div></div>
+<div class="footer-grid"><div class="footer-card"><h3 class="edit" contenteditable="true">Factor de calidad (Q)</h3><div class="edit" contenteditable="true" data-edit="quality"><p>Parámetro adimensional que expresa el amortiguamiento y la selectividad de un filtro de segundo orden. Un Q más alto puede producir mayor realce cerca de la frecuencia natural.</p><p><strong>Filtro Butterworth de 2.º orden:</strong> <span class="eq">Q = 1/√2 ≈ 0,707</span>.</p></div></div><div class="footer-card"><h3 class="edit" contenteditable="true">Frecuencia de corte (f<sub>c</sub>)</h3><div class="edit" contenteditable="true" data-edit="cutoff"><p>Frecuencia que separa la banda de paso de la región de atenuación. En un filtro pasa bajo Butterworth, la magnitud cae aproximadamente <strong>−3 dB</strong> (0,707 de la amplitud de referencia).</p><p><strong>Filtro RC de primer orden:</strong> <span class="eq">f<sub>c</sub> = 1/(2πRC)</span>.</p></div></div></div>
+<div class="project"><strong class="edit" contenteditable="true">Aplicación al proyecto:</strong> <span class="edit" contenteditable="true" data-edit="project">En el monitoreo de temperatura de un invernadero, el sensor PT1000 cambia su resistencia con la temperatura. El puente de Wheatstone convierte esa variación en una pequeña diferencia de voltaje y el amplificador de instrumentación la amplifica para su posterior tratamiento.</span></div>
+<div class="meta"><span class="edit" contenteditable="true" data-edit="student"><strong>Estudiante:</strong> Yordy Norbey Molina Posada · <strong>Grupo:</strong> 203038_83</span><span class="edit" contenteditable="true">UNAD · Ingeniería Electrónica · Reto 3</span></div>
+</article></main><div class="toast" id="toast" role="status"></div>
+<script>
+(() => {
+  'use strict';
+  const KEY='unad-instrumentacion-editor-completo-v2';
+  const $=(q,root=document)=>root.querySelector(q);
+  const $$=(q,root=document)=>[...root.querySelectorAll(q)];
+  const sheet=$('.sheet');
+  const original=sheet.innerHTML;
+  let orderMode=false;
+  const toast=(msg)=>{let t=$('#toast');t.textContent=msg;t.style.display='block';clearTimeout(window.__toastId);window.__toastId=setTimeout(()=>t.style.display='none',3000)};
+  const setup=()=>{
+    $$('.branches .branch').forEach(branch=>{
+      if($('.section-controls',branch))return;
+      const actions=document.createElement('div');actions.className='section-controls no-print';actions.innerHTML='<button type="button" data-op="up" title="Subir sección">↑ Subir</button><button type="button" data-op="down" title="Bajar sección">↓ Bajar</button><button type="button" data-op="duplicate">Duplicar</button><button type="button" class="danger" data-op="delete">Eliminar</button>';
+      branch.prepend(actions);
+    });
+  };
+  const cleanHTML=()=>{
+    const clone=sheet.cloneNode(true);
+    $$('.section-controls',clone).forEach(e=>e.remove());
+    $$('[contenteditable="true"]',clone).forEach(e=>{ if(e.textContent.trim()==='')e.innerHTML='Escribe aquí'; });
+    return clone.innerHTML;
+  };
+  const save=()=>{try{localStorage.setItem(KEY,cleanHTML());toast('Cambios guardados en este navegador.')}catch(e){toast('No se pudo guardar: utiliza Descargar HTML editable.')}};
+  const load=()=>{try{const old=localStorage.getItem(KEY);if(old){sheet.innerHTML=old;setup();toast('Cambios guardados restaurados.')}}catch(e){}};
+  const download=()=>{
+    const clone=document.documentElement.cloneNode(true);
+    const copiedSheet=clone.querySelector('.sheet');copiedSheet.innerHTML=cleanHTML();
+    clone.querySelector('body').classList.remove('order-mode');
+    // Save a portable self-contained editable webpage with current content embedded as the default.
+    const code='<!doctype html>\n'+clone.outerHTML;
+    const blob=new Blob([code],{type:'text/html;charset=utf-8'});
+    const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='cuadro_sinoptico_editable_UNAD.html';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+    toast('Archivo HTML editable descargado.');
+  };
+  $('#save').addEventListener('click',save);
+  $('#download').addEventListener('click',download);
+  $('#pdf').addEventListener('click',()=>window.print());
+  $('#reset').addEventListener('click',()=>{if(confirm('¿Restaurar todo el documento original?')){sheet.innerHTML=original;localStorage.removeItem(KEY);setup();toast('Documento restaurado.')}});
+  $('#toggleMove').addEventListener('click',()=>{orderMode=!orderMode;document.body.classList.toggle('order-mode',orderMode);$('#toggleMove').textContent=orderMode?'Terminar de ordenar':'Ordenar secciones';});
+  $('#addSection').addEventListener('click',()=>{
+    const section=document.createElement('section');section.className='branch lav';section.innerHTML='<div class="branch-title edit" contenteditable="true"><span class="emoji">📝</span> Nueva sección</div><div class="content edit" contenteditable="true"><ul><li>Escribe aquí el contenido</li></ul></div>';
+    $('.branches').appendChild(section);setup();toast('Nueva sección añadida: edita el título y el contenido.');
+  });
+  sheet.addEventListener('click',(event)=>{
+    const btn=event.target.closest('[data-op]');if(!btn)return;
+    const branch=btn.closest('.branch');const parent=branch.parentElement;
+    if(btn.dataset.op==='up' && branch.previousElementSibling)parent.insertBefore(branch,branch.previousElementSibling);
+    if(btn.dataset.op==='down' && branch.nextElementSibling)parent.insertBefore(branch.nextElementSibling,branch);
+    if(btn.dataset.op==='duplicate'){const c=branch.cloneNode(true);parent.insertBefore(c,branch.nextElementSibling);}
+    if(btn.dataset.op==='delete' && confirm('¿Eliminar esta sección?'))branch.remove();
+  });
+  document.addEventListener('keydown',(event)=>{if((event.ctrlKey||event.metaKey)&&event.key.toLowerCase()==='s'){event.preventDefault();save();}});
+  setup();load();
+})();
+</script></body></html>
